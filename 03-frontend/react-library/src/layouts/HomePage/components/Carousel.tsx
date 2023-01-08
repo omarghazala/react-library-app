@@ -2,6 +2,7 @@ import React from "react";
 import ReturnBook from "./ReturnBook";
 import { useEffect,useState } from "react";
 import BookModel from "../../../models/BookModel";
+import SpinnerLoading from "../../Utils/SpinnerLoading";
 
 
 const Carousel = () => {
@@ -54,9 +55,7 @@ const Carousel = () => {
 
     if(isLoading){
         return (
-            <div className="container m-5">
-                <p>Loading ....</p>
-            </div>
+            <SpinnerLoading></SpinnerLoading>
         )
     }
 
@@ -123,7 +122,7 @@ const Carousel = () => {
                 </div>
             </div>
 
-            <div className="hompage-carousel-title mt-3">
+            <div className="hompage-carousel-title mt-3 d-flex justify-content-center align-items-center">
                 <a className="btn btn-outline-secondary btn-lg " href="#">View More</a>
             </div>
         </div>
